@@ -1,0 +1,71 @@
+/* 主廚 */
+
+.chef>.container{
+    margin: 0 auto;
+
+    @include phone-l(){
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.chef{
+    background-color: $color-bg-prim;
+
+    h4,h5,p{
+        color: $color-text-gray;
+    }
+    h4{
+        line-height: 32px;
+    }
+    p{
+        padding-top: 16px;
+        @include phone-l(){
+            display: none;
+            line-height: normal;
+        }
+    }
+}
+
+.chefInfo{
+    max-width: 410px;
+    margin-left: 40px;
+    padding: 16px;
+
+    @include pad(){
+        margin-left: 0;
+        padding-left: 25px;
+    }
+
+    @include phone-l(){
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    h4{
+        @include phone-l(){
+            font-size: $font-m-sec;
+        }
+    }
+    h5{
+        @include phone-l(){
+            font-size: $font-s;
+        }
+    }
+}
+
+.more{
+    display: none;
+    font-size: $font-xs;
+    color: $color-bg;
+    border-bottom: 1px solid $color-bg;
+    font-family: $font-family-sec;
+    letter-spacing: 0.1em;
+    margin-top: 12px;
+    padding: 4px 8px;
+    cursor: pointer;
+
+    @include phone-l(){
+        display: inline-block;
+    }
+}

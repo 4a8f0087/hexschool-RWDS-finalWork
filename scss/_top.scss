@@ -1,0 +1,24 @@
+/* top 按鈕 */
+
+.top{
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    font-size: 48px;
+
+    i{
+    color: $color-text-sec;
+    text-shadow: $btn-shadow;
+
+    &:hover{
+        @include button-hover;
+        opacity: 100%;
+    }
+    }
+
+    @include phone-l(){
+        bottom: 72px;
+        right: 16;
+        font-size: 40px;
+    }
+}

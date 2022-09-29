@@ -1,0 +1,44 @@
+/* shop now 按鈕 */
+
+.shopLink>.container{
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.shopLink{
+    width: 100%;
+    background: $color-bg-sec;
+
+    a{
+        display: block;
+        text-decoration: none;
+        color: $btn-bg-prim;
+        font-size: $font-s;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        outline: 1px solid $btn-border-color;
+        padding: 16px 30px;
+        border-radius: $btn-border-radius;
+        margin-bottom: 42px;
+        text-align: center;
+
+        @include phone-l(){
+            width: 80%;
+            outline: 2px solid $btn-border-color;
+
+           &:active{
+            background: rgba(245,108,35,0.1);
+           } 
+        }
+
+        &:hover{
+            @include button-hover;
+        }
+        
+    }
+
+    i{
+        padding-left: 8px;
+    }
+
+}

@@ -1,0 +1,82 @@
+/* Off Canvas 左側選單  */
+
+.aside{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    width: 240px;
+    height: 100%;
+    background: $btn-text-color;
+    overflow: hidden;
+    -webkit-transform: translateX(-240px);
+    transform: translateX(-240px);
+    transition: all .3s;
+
+    h4{
+        padding: 12px 0;
+        margin: 8px 0;
+        border-bottom: 1px solid $color-border-third;
+        letter-spacing: $font-spacing;
+    }
+
+    a,i{
+        color: $color-text-prim;
+    }
+    
+    a{
+        display: block;
+        padding: 8px;
+
+        &:hover,:active{
+            background: $color-menu-hover-sec;
+            transition: 0.5s;
+        }
+    }
+
+    i{
+        text-shadow: $btn-shadow;
+    
+        &:hover,:active{
+            @include button-hover;
+            opacity: 100%;
+        }
+        }
+}
+
+.menuClose{
+    color: $color-text-sec;
+    font-size: $font-s;
+    display: flex;
+    justify-content: flex-end;
+
+    i{
+        padding: 16px 24px;
+    }
+
+    &:active{
+        background: $color-menu-hover;
+        transition: 0.5s;
+        color: $color-text-gray;
+    }
+}
+
+.asideContent{
+    padding: 0 30px;
+}
+
+.asideMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//增加 class open 觸發選單
+.open .header .banner .content .footer .top{
+    -webkit-transform: translateX(240 px);
+    transform: translateX(240 px);
+}
+.open .aside{
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}

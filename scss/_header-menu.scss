@@ -1,0 +1,115 @@
+/* menu 選單 */
+.menu,.shopMenu{
+    display: flex;
+    align-items: center;
+
+    ul{
+        display: flex;
+    }
+
+    li{
+        display: block;
+    }
+
+    a,.shopMenu>a{
+        color: $color-text-sec;
+        font-size: $font-p;
+        display: inline-block;
+        text-decoration: none;
+        padding: 18px 30px;
+        text-align: center;
+        border-radius: $btn-border-radius;
+
+        &:hover{
+            background: $color-menu-hover;
+            transition: 0.5s;
+        }
+
+        @include pad(){
+            padding: 12px 20px;
+        }
+    }
+
+    @include phone-l(){
+        max-height: 0px;
+        overflow: hidden;
+    }
+    
+}
+
+/* 會員帳戶 & 購物車 */
+.account{
+    ul{
+        margin-left: 8px;
+    }
+    
+    a{
+        border-radius: 50%;
+        padding: 8px;
+    }
+}
+
+
+// 隱藏 menu
+.showMenu{
+
+    display: none;
+
+    @include phone-l(){
+        display: block;
+        float: right;
+    }
+
+    @include phone-l(){
+        padding: 16px 24px;
+    }
+
+    a{
+        color: $color-text-sec;
+        font-size: $font-s;
+        padding: 12px 20px;
+        
+
+        &:hover,:active{
+            background: $color-menu-hover;
+            transition: 0.5s;
+        }
+    }
+}
+
+.navbar{
+    display: flex;
+}
+
+.search{
+    display: none;
+    background: $color-bg-header;
+    position: absolute;
+    top: 51px;
+    right: 0px;
+    left: 0px;
+
+    span{
+        position: absolute;
+        top: 25px;
+        left: 42px;
+        z-index: 1;
+        color: $color-input-icon;
+    }
+
+    input{
+        position: absolute;
+        top: 16px;
+        left: 30px;
+        right: 30px;
+        padding: 8px 16px 8px 36px;
+        border-radius: 25px;
+        border: none;
+    }
+}
+
+.shopMenu>input{
+    //width: 0;
+    left: 50px;
+    right: 50px;
+}

@@ -1,0 +1,45 @@
+/* 我的購物車頁面 */
+
+.shopping>.container{
+    flex-direction: column;
+}
+
+.cartTitle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include shop-title;
+
+    i{
+        font-size: $font-m;
+    }
+
+    span{
+        font-size: $font-m;
+        font-family: $font-family-sec;
+        color: $btn-bg-prim;
+    }
+
+    @include pad(){
+        span,i{
+            font-size: $font-m-sec;
+        }
+    }
+
+    @include phone-l(){
+        padding-left: 6px;
+
+        h2{
+            font-size: $font-m-sec;
+        }
+
+        span,i{
+            font-size: $font-s;
+        }
+    }
+}
+
+@import 'pages-shoppingCart-pdt';
+@import 'pages-shoppingCart-info';
+@import 'pages-shoppingCart-btn';

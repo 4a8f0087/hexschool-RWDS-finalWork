@@ -1,0 +1,147 @@
+/* login 會員登入頁 */
+
+.login>.container{
+    flex-direction: column;
+}
+
+.login,.register{
+    border-bottom: 1px solid $color-border-third;
+
+    h1>img{
+        width: 95%;
+    }
+
+    h3,h4,label{
+        font-family: $font-family-sec;
+    }
+
+    h4{
+        font-weight: $font-weight;
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    label{
+        font-size: $font-p;
+        margin-top: 16px;
+        margin-bottom: 4px;
+    }
+
+    a{
+        font-size: $font-xs;
+        font-family: $font-family;
+        color: $btn-border-color;
+        margin-top: 4px;
+    }
+
+    button,input{
+        border-radius: $btn-border-radius;
+    }
+
+    input{
+
+        &:focus{
+            outline: 2px solid $btn-bg-prim;
+            box-shadow:0 0 4px $btn-bg-prim;
+        }
+
+        &:hover{
+            background: rgba(245,108,35,0.1);
+        }
+    }
+
+    button{
+        border: none;
+        padding: 6px 20px;
+        color: $btn-text-color;
+        letter-spacing: 2px;
+        
+            @include phone-l(){
+                padding: 8px 24px;
+            }
+    }
+
+}
+
+.loginMain{
+    margin-top: 35px;
+    border-top: 3px solid $btn-border-color;
+    width: 40%;
+    box-shadow: $form-shadow;
+
+    @include pad{
+        width: 55%;
+        min-width: 50%;
+    }
+
+    @include phone-l{
+        width: 85%;
+    }
+}
+
+.loginText{
+    width: 100%;
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+
+    span{
+        float: left;
+        margin-left: 9px;
+        margin-top: -27px;
+        position: relative;
+        z-index: 2;
+
+        i{
+            color: $color-input-icon;
+        }
+    }
+
+    input{
+        padding: 10px 9px 10px 32px;
+        border: 1px solid $color-input-border;
+    }
+}
+
+.loginButton{
+    margin-top: 21px;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include phone-l(){
+        flex-direction: column-reverse;
+    }
+
+    button{
+        width: 45%;
+
+        @include phone-l(){
+            width: 100%;
+        }
+    }
+}
+
+.registerBtn{
+    background: $btn-bg-sec;
+}
+
+.loginBtn{
+    background: $btn-bg-prim;
+
+    @include phone-l(){
+        margin-bottom: 12px;
+    }
+}

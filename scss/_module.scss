@@ -1,0 +1,46 @@
+//共同元件
+h1, h2, h3, h4, h5, p, label, button {
+    font-family: "MicrosoftJhengHeiRegular";
+}
+
+h2, h3, h4, h5, p, label{
+    color: $color-text-prim;
+}
+
+h1{
+    font-size: $font-l;
+}
+
+h2{
+    font-size: $font-m;
+}
+
+h3{
+    font-size: $font-m-sec;
+}
+
+h4{
+    font-size: $font-s;
+}
+
+h5,p,input{
+    font-size: $font-p;
+}
+
+a{
+    text-decoration: none;
+}
+
+label{
+    font-size: $font-xs;
+}
+
+button{
+    &:hover,:active{
+        @include button-hover;
+    }
+}
+
+input{
+    transition: 0.5s;
+}

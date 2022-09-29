@@ -1,0 +1,70 @@
+/* 感想 */
+
+.comment>.container{
+    flex-direction: column;
+}
+
+.comment{
+    img{
+        border-radius: 50%;
+    }
+    p{
+        color: $color-text-third;
+    }
+
+    @include pad(){
+        //padding: 0 16px;
+    }
+}
+
+.commentTitle{
+    margin: 0 auto;
+}
+
+.commentContainer{
+    display: flex;
+    margin-top: 32px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include phone-l(){
+        flex-direction: column;
+    }
+}
+
+.commentItem{
+    max-width: 30%;
+    display: flex;
+
+    @include pad(){
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    @include phone-l(){
+        margin-bottom: 8px;
+    }
+}
+
+.avatar{
+    
+    img{
+        max-width: 67px;
+    }
+}
+
+.commenText{
+    margin-left: 13px;
+    
+    h4{
+        padding-top: 21.5px;
+        padding-bottom: 21.5px;
+    }
+    h5{
+        text-align: justify;
+        padding-bottom: 16px;
+    }
+    p{
+        float: right;
+    }
+}

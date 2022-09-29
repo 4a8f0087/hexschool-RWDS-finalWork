@@ -1,0 +1,221 @@
+@import 'pages-shop-header';
+@import 'pages-shop-tabbar';
+
+/* shop 線上訂購頁 */
+.shop>.container{
+    display: block;
+
+    @include phone-l(){
+        margin: 0 auto;
+    }
+}
+
+.shop{
+    
+    h2{
+        font-family: $font-family-sec;
+    }
+
+    a{
+        display: block;
+    }
+}
+
+.sidebar{
+    width: 150px;
+    float: left;
+    //margin-right: 24px;
+
+
+    i{
+        padding-right: 8px;
+    }
+
+    h3{
+        margin-bottom: 20px;
+
+        @include pad(){
+            font-size: $font-s;
+        }
+    }
+
+    a{
+        font-size: $font-p;
+        color: $color-text-prim;
+        padding: 12px 8px 12px 0;
+        border-bottom: 1px solid $color-border-third;
+        border-radius: $btn-border-radius;
+
+        &:hover,:active{
+            background: $color-sidebar-hover;
+            transition: 0.5s;
+        }
+    }
+    
+
+    @include phone-l(){
+        display: none;
+    }
+}
+
+.pdtMain{
+    //width: 100%;
+    margin-left: 170px;
+
+    @include phone-l(){
+        margin: 0 auto;
+    }
+
+    h2{
+        @include shop-title;
+    }
+}
+
+.pdtList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include phone-l(){
+        justify-content: center;
+    }
+}
+
+.pdtItem{
+    text-align: center;
+    display: block;
+    box-shadow: $form-shadow;
+    margin: 0 20px 30px 0;
+    max-width: 220px;
+    position: relative;
+
+    @include pad(){
+        max-width: 250px;
+    }
+
+    @include phone-l(){
+        max-width: 300px;
+        margin: 0 0 30px 0;
+    }
+
+    a{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    img{
+        transform:scale(1,1);
+        transition: all 1s ease-out;
+
+        &:hover{
+            transform:scale(1.2,1.2);
+        }
+    }
+
+}
+
+.pdtName{
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+.pdtPrice{
+    color: $color-text-prim;
+    font-family: $font-family-sec;
+    letter-spacing: $font-spacing;
+    font-size: $font-m-sec;
+    padding-bottom: 16px;
+
+    p{
+        display: inline-block;
+        font-style: italic;
+        font-family: $font-family-sec;
+        font-weight: $font-weight;
+        font-size: $font-m-sec;
+    }
+}
+
+.pdtBtn{
+
+    button{
+        width: 80%;
+        padding: 4px 8px;
+        background: none;
+        border: none;
+        outline: 2px solid $btn-border-color;
+        border-radius: $btn-border-radius;
+        color: $btn-bg-prim;
+        letter-spacing: $font-spacing;
+        font-size: $font-p;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    i{
+        padding-right: 9px;
+    }
+
+}
+
+.popup{
+    @include popup;
+}
+
+.pdtLike{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    button{
+        border: none;
+        background: none;
+        color: $btn-text-color;
+        font-size: $font-m;
+        cursor: pointer;
+        box-shadow: none;
+        transform: none;
+        transition: none;
+    }
+}
+
+.flagWrap{
+    font-size: $font-xs;
+    font-weight: $font-weight;
+    color: $flag-color;
+    width: 76px;
+    height: 102px;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    right: -6px;
+}
+.pdtFlag {
+    background-color: $flag-bg;
+    position: relative;
+    left: -1px;
+    top: 14px;
+    width: 107px;
+    padding: 5px 0;
+    text-align: center;
+    transform: $flag-angle;
+
+    &::before{
+        content: "";
+        border-top: 4px solid $flag-shadow;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        position: absolute;
+        bottom: -4px;
+        left: 4px;
+    }
+
+    &::after{
+        content: "";
+        border-top: 4px solid $flag-shadow;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        position: absolute;
+        bottom: -4px;
+        right: 9px;
+    }
+}

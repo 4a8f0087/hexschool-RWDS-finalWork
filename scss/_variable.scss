@@ -1,0 +1,91 @@
+//變數
+
+//font
+$font-p: 16px;
+$font-l: 36px;
+$font-m: 24px;
+$font-m-sec: 20px;
+$font-s: 18px;
+$font-xs: 14px;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+$font-family: 'MicrosoftJhengHeiRegular';
+$font-family-sec: 'Noto Sans TC', sans-serif;
+$font-weight: 900;
+$font-spacing: 0.1em;
+
+//color system
+//text
+$color-text-prim: rgba(61,17,1,1);
+$color-text-sec: rgba(255,255,255,1);
+$color-text-third: rgba(61,17,1,0.75);
+$color-text-gray: rgba(239,233,231,1);
+
+//background
+$color-bg: #efe9e7;
+$color-bg-header: rgba(0,0,0,0.75);
+$color-bg-banner: #0b0100;
+$color-bg-prim: rgba(61,17,1,1);
+$color-bg-sec: rgba(250,250,250,0.7);
+
+//border
+$color-border-prim: rgba(61,17,1,1);
+$color-border-sec: rgba(151,151,151,1);
+$color-border-third: rgba(151,151,151,0.3);
+
+//button
+$btn-bg-prim: rgba(245,108,35,1);
+$btn-bg-sec: rgba(0,0,0,0.35);
+$btn-text-color: rgba(255,255,255,1);
+$btn-border-color: rgba(255,94,69,1);
+$btn-border-radius: 3px;
+$btn-shadow: 0 5px 5px rgb(0,0,0,20%);
+
+
+//radio
+$color-radio-border: rgba(204,204,204,1);
+$color-radio-active: rgba(74,144,226,1);
+
+//input
+$color-input-border: rgba(204,204,204,1);
+$color-input-text: rgba(74,74,74,1);
+$color-input-icon: rgba(61,17,1,0.5);
+
+//hover
+$color-menu-hover: rgba(239,233,231,0.2);
+$color-menu-hover-sec: rgba(239,233,231,0.6);
+$color-sidebar-hover: rgba(250,250,250,0.7);
+
+//tabbar
+$tabbar-bg: rgba(255,255,255,1);
+$tabbar-fz: 20px;
+$tabbar-color: #565656;
+$tabbar-active-bg: #ddd;
+
+//breadcrumb
+$color-bread: rgba(74,74,74,0.8);
+$font-bread-text: 14px;
+
+//account form
+$form-shadow: 3px 3px 4px rgba(0,0,0,0.16);
+
+//product flag
+$flag-fz: 14px;
+$flag-color: rgba(255,255,255,1);
+$flag-bg: rgba(0,204,153,1);
+$flag-shadow: rgb(77, 134, 120);
+$flag-angle: rotate(-315deg);
+
+//table
+$table-th-bg: #e1d8d1;
+$table-th-color: #565656;
+$table-td-bg: #f8eded;
+$table-td-color: #333;
+$table-td-fm: "微軟正黑體";
+$table-td-fz: 16px;
+$table-a-hover: 80%;
+
+
+
+

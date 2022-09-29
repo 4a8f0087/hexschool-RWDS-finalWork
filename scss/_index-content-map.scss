@@ -1,0 +1,149 @@
+/* 地圖 & 訂位表單 */
+
+.map>.container{
+    flex-direction: column;
+    padding: 50px 42px;
+    margin: 0 auto;
+
+    @include pad(){
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include phone-l(){
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.map{
+    background-color: $color-bg-sec;
+
+    label,input{
+    display: block;
+    }
+    
+    button,input{
+    border-radius: $btn-border-radius;
+    }
+    
+    input{
+        width: 100%;
+
+        &:focus{
+            outline: 2px solid $btn-bg-prim;
+            box-shadow:0 0 4px $btn-bg-prim;
+        }
+
+        &:hover{
+            background: rgba(245,108,35,0.1);
+        }
+    }
+    
+    button{
+    border: none;
+    padding: 6px 20px;
+    color: $btn-text-color;
+    letter-spacing: 2px;
+    
+        @include phone-l(){
+            padding: 8px 24px;
+        }
+    }
+
+    h2{
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    label,button{
+        @include phone-l(){
+            font-size: $font-s;
+        }
+    }
+    
+}
+
+.mapContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @include phone-l(){
+        flex-direction: column;
+    }
+}
+
+.mapImg{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.formArea{
+    margin-left: 20px;
+    width: 100%;
+    label{
+        padding-bottom: 6px;
+    }
+
+    @include phone-l(){
+        margin: 0;
+    }
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 12px;
+
+    input{
+        padding: 5px 14px;
+        border: 1px solid $color-input-border;
+
+        @include phone-l(){
+            padding: 8px 14px;
+        }
+    }
+
+    @include phone-l(){
+        padding-bottom: 32px;
+    }
+}
+
+.radioButton{
+    display: flex;
+    align-items: center;
+    label{
+        padding-bottom: 0;
+        padding-right: 6px;
+    }
+    input{
+        margin: 0;
+    }
+}
+
+.radioNo{
+    margin-left: 36px;
+}
+
+.formBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btnCancel{
+    background: $btn-bg-sec;
+
+}
+
+.btnSubmit{
+    background: $btn-bg-prim;
+    margin-left: 20px;
+    
+    @include phone-l(){
+        margin-left: 24px;
+    }
+}
+

@@ -1,0 +1,61 @@
+// 圖片取代文字
+@mixin hide-text {
+    text-indent: 101%;  
+	overflow: hidden;  
+	white-space: nowrap;
+}
+
+// 清除浮動
+@mixin clear-float {
+    clear:both;
+}
+
+// button :hover效果
+@mixin button-hover {
+    box-shadow: 0 0.5em 0.5em -0.4em $btn-text-color;
+    transform: scale(1.1);
+    transition: 0.2s;
+    opacity: 90%;
+}
+
+//shop pages title
+@mixin shop-title {
+    border-left: 3px solid $color-border-prim;
+    padding-left: 12px;
+    margin-bottom: 30px;
+}
+
+// popup
+@mixin popup{
+    display: none;
+    position: fixed;
+    top:10%;
+    left:50%;
+    z-index: 50;
+    width: 20%;
+    border-radius: 12px;
+    margin-left:-50px;
+    background-color: #efe9e7;
+    padding: 10px;
+    border: 1px solid $btn-border-color;
+    text-align: center;
+    
+    p,i{
+        color: $btn-bg-prim;
+    }
+
+    i{
+        font-size: 40px;
+        padding: 20px 0;
+    }
+
+    @include pad(){
+        top: 20%;
+        width: 30%;
+    }
+
+    @include phone-l(){
+        width: 40%;
+        margin-left: -70px;
+    }
+}

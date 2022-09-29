@@ -1,0 +1,81 @@
+/* 立即結帳 & 繼續購物按鈕 */
+.shopBtn{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+
+    button{
+        padding: 8px 100px;
+        font-size: $font-s;
+        font-family: $font-family-sec;
+        letter-spacing: $font-spacing;
+        cursor: pointer;
+
+        i{
+            padding-left: 4px;
+        }
+    }
+
+    @include pad(){
+        button{
+            padding: 8px 75px;
+        }
+    }
+
+    @include phone-l(){
+        flex-direction: column-reverse;
+
+        button{
+            padding: 4px;
+            font-size: $font-xs;
+        }
+    }
+}
+
+.back{
+    background: none;
+    border: none;
+    outline: 2px solid $btn-border-color;
+    border-radius: $btn-border-radius;
+    letter-spacing: $font-spacing;
+    font-size: $font-p;
+
+    a{
+        color: $btn-bg-prim;
+    }
+}
+
+.checkout{
+    background: $btn-bg-prim;
+    border: none;
+    border-radius: $btn-border-radius;
+    outline: 2px solid $btn-border-color;
+    letter-spacing: $font-spacing;
+    font-size: $font-p;
+
+    a{
+        color: $btn-text-color;
+    }
+
+    @include phone-l(){
+        margin-bottom: 20px;
+    }
+}
+
+.quantityBtn{
+
+    button{
+        border: none;
+    }
+
+    input{
+        border: 1px solid $btn-border-color;
+    }
+
+    i{
+        color: $btn-border-color;
+    }
+
+}

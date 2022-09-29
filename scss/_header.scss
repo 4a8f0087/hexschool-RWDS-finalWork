@@ -1,0 +1,50 @@
+/* header 表頭 */
+.header{
+    margin: 0 auto;
+    background: $color-bg-header;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 15;
+}
+
+.header>.container{
+    margin: 0 auto;
+    position: relative;
+
+    @include pad(){
+        align-items: baseline;
+    }
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// logo
+.headerLogo{
+    background-image: url(../img/logo_w\(null\).svg);
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 24px;
+    background-size: contain;
+    display: block;
+    @include hide-text;
+    cursor: pointer;
+
+    @include pad(){
+        margin: 24px auto 8px auto;
+    }
+
+    @include phone-l(){
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@import 'header-menu';
+@import 'header-asideMenu';

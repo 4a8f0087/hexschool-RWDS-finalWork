@@ -1,0 +1,34 @@
+/* 結帳資訊 */
+.cartDetail{
+    margin-top: 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    background: $table-td-bg;
+    width: 100%;
+
+    p{
+        padding-top: 10px;
+        font-size: $font-xs;
+    }
+
+}
+
+.quantity,.shippingFee,.amount{
+    padding: 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e2e2;
+    font-family: $font-family-sec;
+}
+
+.quantity{
+    align-items: flex-end
+}
+
+.free,.total{
+    color: $btn-bg-prim;
+}
+
+.total{
+    font-size: $font-m;
+}

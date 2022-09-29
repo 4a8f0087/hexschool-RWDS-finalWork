@@ -1,0 +1,27 @@
+/* 麵包屑導覽 */
+// pages 才有放麵包屑
+.breadcrumb>.container{
+    justify-content: flex-start;
+    margin: 0 auto;
+    border-bottom: 1px solid $color-border-third;
+}
+
+.breadcrumb{
+    margin: 16px 0;
+
+    @include phone-l{
+        margin: 8px 0;
+    }
+
+    a,span{
+        color: $color-bread;
+        font-size: $font-bread-text;
+        padding: 2px 4px 8px 4px;
+    }
+ 
+}
+
+@import 'pages-login';
+@import 'pages-register';
+@import 'pages-shop';
+@import 'pages-shoppingCart';

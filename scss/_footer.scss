@@ -1,0 +1,128 @@
+/* footer 表尾 */
+.container{
+    @include phone-l(){
+        justify-content: center;
+    }
+}
+
+.footerInfo{
+    display: flex;
+    p{
+        padding-top: 16px;
+    }
+    ul{
+        padding-top: 16px;
+    }
+
+    @include pad(){
+        margin-right: 30px;
+    }
+
+    @include phone-l(){
+        display: none;
+    }
+
+    h4{
+        @include pad(){
+            font-size: $font-s;
+            font-weight: 600;
+        }
+    }
+}
+
+.about{
+    max-width: 299px;
+
+    @include pad(){
+        padding-right: 12px;
+    }
+}
+
+.contact{
+    max-width: 299px;
+    margin-left: 21px;
+
+    @include pad(){
+        float: left;
+        margin: 0;
+    }
+    
+    ul{
+        list-style: disc;
+        text-indent: -4px;
+        padding-left: 20px;
+
+        @include pad(){
+            padding-top: 8px;
+            letter-spacing: 0.1em;
+            line-height: normal;
+            list-style: none;
+            text-indent: 0;
+            padding-left: 0;
+        }
+
+    }
+
+}
+
+.footerLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include phone-l(){
+        align-items: center;
+    }
+}
+
+.footerLogo{
+    background-image: url(../img/logo_l@svg.svg);
+    width: 245px;
+    height: 49px;
+    background-size: contain;
+    display: block;
+    @include hide-text;
+    cursor: pointer;
+
+    @include pad(){
+        float: right;
+    }
+}
+
+.socialLinks{
+    display: flex;
+    margin-top: 22px;
+    @include pad(){
+        
+    }
+
+    li{
+        padding-left: 12px;
+
+        @include pad(){
+            padding-left: 20px;
+        }
+    }
+    i{
+        font-size: $font-l;
+    }
+    
+}
+
+.google,.twi,.fb{
+    &:hover,:active{
+        @include button-hover;
+    }
+}
+
+.google{
+    color: rgba(219,68,55,1);
+}
+
+.twi{
+    color: rgba(65,171,225,1);
+}
+
+.fb{
+    color: rgba(58,87,149,1);
+}

@@ -1,0 +1,115 @@
+/* 商品明細表格 */
+//商品資料
+.pdtDetail{
+    width: 100%;
+
+    table{
+        width: 100%;
+        text-align: center;
+    }
+
+    th{
+        background: $table-th-bg;
+        font-family: $font-family-sec;
+        color: $table-th-color;
+        padding: 16px 8px;
+        
+    }
+
+    td,i{
+        font-size: $table-td-fz;
+        color: $table-td-color;
+    }
+
+    tbody{
+        background: $table-td-bg;
+    }
+
+    td{
+        font-family: $table-td-fm;
+        padding: 12px 12px 20px 12px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    a{
+        &:hover{
+            opacity: $table-a-hover;
+        }
+    }
+
+    img{
+        padding-bottom: 8px;
+    }
+
+    @include phone-l(){
+
+        thead{
+            display: none;
+        }
+
+        th{
+            padding: 8px;
+        }
+
+        td{
+            display: block; 
+            
+            img{
+                padding-bottom: 16px;
+            }
+        
+            &:before {
+              content: attr(data-label);
+              font-weight: $font-weight;
+              font-family: $font-family-sec;
+              color: $table-th-color;
+              display: inline-block;  
+              float: left;
+            }
+
+        }
+
+        td,i{
+            font-size: $font-xs;
+        }
+    }
+
+}
+
+//數量
+.quantityBtn{
+    display: flex;
+    justify-content: center;
+
+    button{
+        padding: 0 8px;
+    }
+
+    input{
+        max-width: 60px;
+        text-align: center;
+        padding: 6px 12px;
+    }
+}
+
+/* 購物車刪除成功通知 */
+.delPopup{
+    @include popup;
+}
+
+.delClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    padding: 0.5em;
+
+    i{
+        padding: 0;
+        font-size: $font-s;
+    }
+}
+
